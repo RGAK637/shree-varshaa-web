@@ -1,63 +1,74 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm py-6">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-3xl font-bold text-gray-800">Welcome</h1>
+          <p className="text-gray-500 mt-1">Traditional South Indian food, made with love</p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Cards */}
+      <main className="max-w-4xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Shree Varshaa Card */}
+          <Link href="/shree-varshaa" className="group">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-gradient-to-br from-orange-400 to-amber-500 p-8 text-white">
+                <div className="text-5xl mb-3">🍱</div>
+                <h2 className="text-2xl font-bold">Shree Varshaa Enterprises</h2>
+                <p className="text-orange-100 mt-1 text-sm">Velniya Valiyagam</p>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 text-sm mb-4">
+                  Traditional South Indian catering for daily meals, special functions, and festivals.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1 mb-4">
+                  <li>✅ Daily Lunch & Dinner Services</li>
+                  <li>✅ Pooja, Valaikappu, Gruhapravesam</li>
+                  <li>✅ Festival Sweets & Snacks</li>
+                  <li>✅ 20+ Special Menu Items</li>
+                </ul>
+                <span className="inline-block bg-orange-500 text-white text-sm font-medium px-4 py-2 rounded-full group-hover:bg-orange-600 transition-colors">
+                  View Details →
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Nalam Kitchen Card */}
+          <Link href="/nalam-kitchen" className="group">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-8 text-white">
+                <div className="text-5xl mb-3">🫙</div>
+                <h2 className="text-2xl font-bold">Nalam Kitchen</h2>
+                <p className="text-blue-100 mt-1 text-sm">Homemade Goodness, Delivered Fresh</p>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 text-sm mb-4">
+                  Authentic homemade podi, pickles, applam, and vadam — made fresh with traditional recipes.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1 mb-4">
+                  <li>✅ Podi Varieties (6+ types)</li>
+                  <li>✅ Traditional Pickles (6+ types)</li>
+                  <li>✅ Applam & Vadam Varieties</li>
+                  <li>✅ Fresh, No Preservatives</li>
+                </ul>
+                <span className="inline-block bg-blue-500 text-white text-sm font-medium px-4 py-2 rounded-full group-hover:bg-blue-600 transition-colors">
+                  View Products →
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        {/* Contact strip */}
+        <div className="mt-12 text-center text-gray-500 text-sm">
+          <p>📞 98402 57907 &nbsp;|&nbsp; 96009 56763 &nbsp;|&nbsp; ✉️ shreevarshaacatering@gmail.com</p>
+          <p className="mt-1">D 41, Anand Apartments, 87/50, LB Road, Thiruvanmiyur, Chennai - 600 041</p>
         </div>
       </main>
     </div>
