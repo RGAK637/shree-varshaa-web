@@ -4,71 +4,78 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
       {/* Header */}
-      <header className="bg-white shadow-sm py-6">
+      <header className="bg-white shadow-sm py-8">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-3xl font-bold text-gray-800">Welcome</h1>
-          <p className="text-gray-500 mt-1">Traditional South Indian food, made with love</p>
+          <h1 className="text-3xl font-bold text-gray-800">Our Businesses</h1>
+          <p className="text-gray-500 mt-1">Thiruvanmiyur, Chennai</p>
         </div>
       </header>
 
       {/* Cards */}
       <main className="max-w-4xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-8">
+
           {/* Shree Varshaa Card */}
           <Link href="/shree-varshaa" className="group">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="bg-gradient-to-br from-orange-400 to-amber-500 p-8 text-white">
-                <div className="text-5xl mb-3">🍱</div>
-                <h2 className="text-2xl font-bold">Shree Varshaa Enterprises</h2>
-                <p className="text-orange-100 mt-1 text-sm">Velniya Valiyagam</p>
+                <div className="text-5xl mb-3">🏪</div>
+                <h2 className="text-2xl font-bold">Shree Varshaa Xerox & Stationery</h2>
+                <p className="text-orange-100 mt-1 text-sm">Valmiki Street, Thiruvanmiyur · ⭐ 4.7</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 text-sm mb-4">
-                  Traditional South Indian catering for daily meals, special functions, and festivals.
+                  Your one-stop shop for xerox, printout, scanning, lamination, binding, and rubber stamps.
                 </p>
-                <ul className="text-sm text-gray-500 space-y-1 mb-4">
-                  <li>✅ Daily Lunch & Dinner Services</li>
-                  <li>✅ Pooja, Valaikappu, Gruhapravesam</li>
-                  <li>✅ Festival Sweets & Snacks</li>
-                  <li>✅ 20+ Special Menu Items</li>
+                <ul className="text-sm text-gray-500 space-y-1 mb-5">
+                  <li>✅ Xerox &amp; Printout &amp; Scan</li>
+                  <li>✅ Lamination</li>
+                  <li>✅ Spiral Binding</li>
+                  <li>✅ Rubber Stamp</li>
                 </ul>
-                <span className="inline-block bg-orange-500 text-white text-sm font-medium px-4 py-2 rounded-full group-hover:bg-orange-600 transition-colors">
-                  View Details →
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-400">📞 044 4230 0545</span>
+                  <span className="inline-block bg-orange-500 text-white text-sm font-medium px-4 py-2 rounded-full group-hover:bg-orange-600 transition-colors">
+                    View Details →
+                  </span>
+                </div>
               </div>
             </div>
           </Link>
 
-          {/* Nalam Kitchen Card */}
-          <Link href="/nalam-kitchen" className="group">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-8 text-white">
-                <div className="text-5xl mb-3">🫙</div>
-                <h2 className="text-2xl font-bold">Nalam Kitchen</h2>
-                <p className="text-blue-100 mt-1 text-sm">Homemade Goodness, Delivered Fresh</p>
+          {/* Nalam Products Card */}
+          <Link href="/nalam-products" className="group">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-br from-green-700 to-teal-600 p-8 text-white">
+                <div className="text-5xl mb-3">🌿</div>
+                <h2 className="text-2xl font-bold">Nalam Products</h2>
+                <p className="text-green-100 mt-1 text-sm">Homemade Kukkari Powders · Vazhga Vaiyagam</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 text-sm mb-4">
-                  Authentic homemade podi, pickles, applam, and vadam — made fresh with traditional recipes.
+                  Homemade spice powders, health mix, and daily tiffin &amp; lunch delivery.
                 </p>
-                <ul className="text-sm text-gray-500 space-y-1 mb-4">
-                  <li>✅ Podi Varieties (6+ types)</li>
-                  <li>✅ Traditional Pickles (6+ types)</li>
-                  <li>✅ Applam & Vadam Varieties</li>
-                  <li>✅ Fresh, No Preservatives</li>
+                <ul className="text-sm text-gray-500 space-y-1 mb-5">
+                  <li>✅ 9 Homemade Podi Varieties</li>
+                  <li>✅ Health Mix &amp; Pulikachal Paste</li>
+                  <li>✅ Daily Tiffin Delivery</li>
+                  <li>✅ Lunch &amp; Dinner Orders</li>
                 </ul>
-                <span className="inline-block bg-blue-500 text-white text-sm font-medium px-4 py-2 rounded-full group-hover:bg-blue-600 transition-colors">
-                  View Products →
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-400">📞 96000 56763</span>
+                  <span className="inline-block bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-full group-hover:bg-green-800 transition-colors">
+                    View Products →
+                  </span>
+                </div>
               </div>
             </div>
           </Link>
         </div>
 
-        {/* Contact strip */}
-        <div className="mt-12 text-center text-gray-500 text-sm">
-          <p>📞 98402 57907 &nbsp;|&nbsp; 96009 56763 &nbsp;|&nbsp; ✉️ shreevarshaacatering@gmail.com</p>
-          <p className="mt-1">D 41, Anand Apartments, 87/50, LB Road, Thiruvanmiyur, Chennai - 600 041</p>
+        {/* Footer strip */}
+        <div className="mt-12 text-center text-gray-400 text-xs space-y-1">
+          <p>T. S. Ganessan: 98402 57907 &nbsp;·&nbsp; R. N. Rajan: 96000 56763</p>
+          <p>D 41, Anand Apartments, 87/50, LB Road, Thiruvanmiyur, Chennai - 600 041</p>
         </div>
       </main>
     </div>
